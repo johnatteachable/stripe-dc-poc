@@ -2,7 +2,7 @@
 
 start with `go run main.go` 
 
-Load the other app stripe-dc-poc-fe 
+Load the other app [stripe-dc-poc-fe](https://github.com/johnatteachable/stripe-dc-poc-fe)
 
 Endpoints
   - /create-checkout-session
