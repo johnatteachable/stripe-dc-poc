@@ -63,7 +63,7 @@ func main() {
 			return
 		}
 
-		stripe.Key = "sk_test_51C1IhzF1zKN8JIpKx1g8eXCWVlesXbAuBqxmr6iSKiVJoxF7YlkJghvFqSrhz7Jpd4t5oyyL8AgSv8CkP29zqqmp00sPtugADU"
+		stripe.Key = "REDACTED"
 		params := &stripe.RefundParams{
 			//TODO FIND CHARGE ID
 			Charge:          stripe.String(req.Account),
@@ -117,7 +117,7 @@ func main() {
 	})
 
 	r.Handle("GET", "/charges", func(c *gin.Context) {
-		stripe.Key = "sk_test_51C1IhzF1zKN8JIpKx1g8eXCWVlesXbAuBqxmr6iSKiVJoxF7YlkJghvFqSrhz7Jpd4t5oyyL8AgSv8CkP29zqqmp00sPtugADU"
+		stripe.Key = "RDEACTED"
 
 		params := &stripe.ChargeListParams{}
 		// params.Limit = stripe.Int64(7)
@@ -140,10 +140,9 @@ func main() {
 		}
 
 		fmt.Printf("Fetching account: %s\n", req.Name)
-		// stripe.Key = "sk_test_51C1IhzF1zKN8JIpKx1g8eXCWVlesXbAuBqxmr6iSKiVJoxF7YlkJghvFqSrhz7Jpd4t5oyyL8AgSv8CkP29zqqmp00sPtugADU"
+		// stripe.Key = "REDACTED"
 
-		// PRODUCTION ACCOUNT
-		stripe.Key = "sk_live_f0zUjoIv8xqPHBcJ9kyMatJP"
+		stripe.Key = "REDACTED"
 		params := &stripe.AccountParams{}
 		result, err := account.GetByID(req.Name, params)
 		if err != nil {
@@ -173,7 +172,7 @@ func main() {
 			})
 			return
 		}
-		stripe.Key = "sk_test_51C1IhzF1zKN8JIpKx1g8eXCWVlesXbAuBqxmr6iSKiVJoxF7YlkJghvFqSrhz7Jpd4t5oyyL8AgSv8CkP29zqqmp00sPtugADU"
+		stripe.Key = "REDACTED"
 		// UPDATING CONNECTED ACCOUNT DELAYS DAYS
 		// params := &stripe.AccountParams{
 		// 	Settings: &stripe.AccountSettingsParams{
@@ -222,7 +221,7 @@ func main() {
 			})
 			return
 		}
-		stripe.Key = "sk_test_51C1IhzF1zKN8JIpKx1g8eXCWVlesXbAuBqxmr6iSKiVJoxF7YlkJghvFqSrhz7Jpd4t5oyyL8AgSv8CkP29zqqmp00sPtugADU"
+		stripe.Key = "REDACTED"
 		/*
 			NZ - acct_1JYGw72V1ZrQbUTv
 			CANADA - acct_1IBQYU2X2GsXY6qD
